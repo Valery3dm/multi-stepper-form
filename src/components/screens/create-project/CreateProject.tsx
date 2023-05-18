@@ -1,6 +1,8 @@
 import { FormEvent, useState } from 'react';
 
 import AddNewProjectForm from '@/components/AddNewProjectForm/AddNewProjectForm';
+import ProjectDetailsForm from '@/components/ProjectDetailsForm/ProjectDetailsForm';
+
 import MobileCrumbs from '@/common/MobileCrumbs/MobileCrumbs';
 import DesktopCrumbs from '@/common/DesktopCrumbs/DesktopCrumbs';
 
@@ -37,12 +39,12 @@ const CreateProject = () => {
         ),
         stepName: 'Start First Project',
       },
-      // {
-      //   stepElement: (
-      //     <ProjectDetailsForm {...data} updateFields={updateFields} />
-      //   ),
-      //   stepName: 'Project Details',
-      // },
+      {
+        stepElement: (
+          <ProjectDetailsForm {...data} updateFields={updateFields} />
+        ),
+        stepName: 'Project Details',
+      },
       // {
       //   stepElement: (
       //     <CreateProjectForm {...data} updateFields={updateFields} />
