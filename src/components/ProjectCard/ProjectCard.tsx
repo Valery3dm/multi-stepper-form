@@ -15,7 +15,7 @@ const ProjectCard = ({
 }: ProjectCardProps) => {
   return (
     <div className={styles.cardWrapper}>
-      <h2>{projectName}</h2>
+      <h2 className={styles.projectName}>{projectName}</h2>
       <div>
         <div>Contact email:</div>
         <div>{email}</div>

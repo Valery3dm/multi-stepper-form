@@ -7,3 +7,8 @@
   flex-direction: column;
   gap: 10px;
 }
+
+.projectName {
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
