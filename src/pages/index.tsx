@@ -1,6 +1,6 @@
 import Head from 'next/head';
 
-import Home from '@/components/screens/home/Home';
+import Home from '@/components/screens/home';
 
 import { Inter } from 'next/font/google';
 
