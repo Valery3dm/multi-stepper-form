@@ -1,0 +1,28 @@
+.greetingContent {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 15vh;
+  gap: 20px;
+}
+
+.greetingBtn {
+  display: flex;
+  border: none;
+  width: 300px;
+  height: 48px;
+  background: #2B8CE6;
+  color: #101313;
+  border-radius: 10px;
+  justify-content: center;
+  align-items: center;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 22px;
+}
+
+.greetingBtn:hover {
+  background: #a8ffb6;
+}

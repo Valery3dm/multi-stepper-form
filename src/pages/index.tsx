@@ -1,27 +1,12 @@
 import Head from 'next/head';
-import { Inter } from 'next/font/google';
+
 import Home from '@/components/screens/home/Home';
 
-import styles from '@/styles/Home.module.css';
+import { Inter } from 'next/font/google';
 
 const inter = Inter({ subsets: ['latin'] });
 
-type FormData = {
-  _id: string;
-  projectName: string;
-  projectURL: string;
-  projectCategory: string;
-  projectDetails: string;
-  workers: number;
-  productLaunch: string;
-  email: string;
-};
-
-type HomePageProps = {
-  projects: FormData[];
-};
-
-export default function HomePage({ projects }: HomePageProps) {
+export default function HomePage() {
   return (
     <>
       <Head>
@@ -30,31 +15,9 @@ export default function HomePage({ projects }: HomePageProps) {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <main className={`${styles.main} ${inter.className}`}>
-        <Home projects={projects}/>
+      <main className={`${inter.className}`}>
+        <Home />
       </main>
     </>
   );
-}
-
-export async function getServerSideProps() {
-  try {
-    const response = await fetch(`https://multi-stepper-form-4ir1xn0fm-valery3dm.vercel.app/api/projects`, {
-      method: 'GET',
-    });
-    const data = await response.json();
-
-    return {
-      props: {
-        projects: data,
-      },
-    };
-  } catch (error) {
-    console.error('Fetch Error', error);
-    return {
-      props: {
-        data: [],
-      },
-    };
-  }
 }
