@@ -27,7 +27,7 @@ export default function ListPage({ projects }: ListPageProps) {
 export async function getServerSideProps() {
   try {
     const response = await fetch(
-      `https://multi-stepper-form-4ir1xn0fm-valery3dm.vercel.app/api/projects`,
+      `https://multi-stepper-form.vercel.app/api/projects`,
       {
         method: 'GET',
       },
