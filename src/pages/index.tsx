@@ -1,7 +1,8 @@
 import Head from 'next/head';
 import { Inter } from 'next/font/google';
+import Home from '@/components/screens/home/Home';
+
 import styles from '@/styles/Home.module.css';
-import Link from 'next/link';
 
 const inter = Inter({ subsets: ['latin'] });
 
@@ -16,11 +17,11 @@ type FormData = {
   email: string;
 };
 
-type HomeProps = {
+type HomePageProps = {
   projects: FormData[];
 };
 
-export default function Home({ projects }: HomeProps) {
+export default function HomePage({ projects }: HomePageProps) {
   return (
     <>
       <Head>
@@ -30,15 +31,7 @@ export default function Home({ projects }: HomeProps) {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main className={`${styles.main} ${inter.className}`}>
-        <ul>
-          {projects &&
-            projects.map((project, idx) => (
-              <li style={{ color: 'white' }} key={idx}>
-                {project._id}
-              </li>
-            ))}
-        </ul>
-        <Link href={'/test'}>Test</Link>
+        <Home projects={projects}/>
       </main>
     </>
   );
