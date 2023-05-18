@@ -34,3 +34,7 @@
 .greetingBtn:hover {
   background: #a8ffb6;
 }
+
+.greetingTitle {
+  text-indent: 0px
+}

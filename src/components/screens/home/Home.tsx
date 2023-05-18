@@ -8,7 +8,7 @@ const Home = () => {
   return (
     <div className={styles.greetingContent}>
       <div className={styles.greetingText}>
-        <h3>Hello there!</h3>
+        <h3 className={styles.greetingTitle}>Hello there!</h3>
       </div>
       <div className={styles.greetingText}>
         This project is built with Next.js pages and has several routes
