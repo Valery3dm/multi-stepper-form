@@ -1,33 +1,16 @@
-import Link from 'next/link';
 import React from 'react';
 
-type FormData = {
-  _id: string;
-  projectName: string;
-  projectURL: string;
-  projectCategory: string;
-  projectDetails: string;
-  workers: number;
-  productLaunch: string;
-  email: string;
-};
+import Link from 'next/link';
 
-type HomeProps = {
-  projects: FormData[];
-};
+import styles from './Home.module.css';
 
-const Home = ({ projects }: HomeProps) => {
+const Home = () => {
   return (
-    <div>
-      <ul>
-        {projects &&
-          projects.map((project, idx) => (
-            <li style={{ color: 'white' }} key={idx}>
-              {project._id}
-            </li>
-          ))}
-      </ul>
-      <Link href={'/test'}>Test</Link>
+    <div className={styles.greetingContent}>
+      <div className={styles.greetingText}>SOME TEXT</div>
+      <Link href={'/list'} className={styles.greetingBtn}>
+        Let's go
+      </Link>
     </div>
   );
 };
