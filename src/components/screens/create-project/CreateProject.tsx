@@ -2,7 +2,7 @@ import { FormEvent, useState } from 'react';
 
 import AddNewProjectForm from '@/components/AddNewProjectForm/AddNewProjectForm';
 import ProjectDetailsForm from '@/components/ProjectDetailsForm/ProjectDetailsForm';
-
+import CreateProjectForm from '@/components/CreateProjectForm/CreateProjectForm';
 import MobileCrumbs from '@/common/MobileCrumbs/MobileCrumbs';
 import DesktopCrumbs from '@/common/DesktopCrumbs/DesktopCrumbs';
 
@@ -45,19 +45,18 @@ const CreateProject = () => {
         ),
         stepName: 'Project Details',
       },
-      // {
-      //   stepElement: (
-      //     <CreateProjectForm {...data} updateFields={updateFields} />
-      //   ),
-      //   stepName: 'Create Project',
-      // },
+      {
+        stepElement: (
+          <CreateProjectForm {...data} updateFields={updateFields} />
+        ),
+        stepName: 'Create Project',
+      },
     ]);
 
   const createProject = async () => {
     try {
-      const response = await fetch('/api/projects/new', {
+      const response = await fetch('/api/projects', {
         method: 'POST',
-        cache: 'no-store',
         body: JSON.stringify(data),
       });
 
