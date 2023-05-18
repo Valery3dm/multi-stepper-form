@@ -1,0 +1,53 @@
+.crumbsWrapper {
+  display: none;
+  margin: 0;
+}
+
+@media (max-width: 710px) {
+  .crumbsWrapper {
+    display: flex;
+    flex-direction: row;
+    gap: 4px;
+    visibility: visible;
+    align-items: center;
+    width: fit-content;
+    margin: 56px auto 20px auto;
+  }
+}
+
+.emptyWood {
+  width: 40px;
+  height: 1px;
+  background: rgba(255, 255, 255, 0.3);
+}
+
+.emptyDot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.3);
+}
+
+.currentDot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #fff;
+  transition: 0.5s ease-in;
+  transition-timing-function: linear;
+}
+
+.prevWood {
+  width: 40px;
+  height: 1px;
+  background-color: #2B8CE6;
+  transition: 0.5s ease-in;
+  transition-timing-function: linear;
+}
+
+.prevDot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #2B8CE6;
+}

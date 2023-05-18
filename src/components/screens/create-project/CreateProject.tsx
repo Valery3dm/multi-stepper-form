@@ -1,6 +1,8 @@
 import { FormEvent, useState } from 'react';
 
 import AddNewProjectForm from '@/components/AddNewProjectForm/AddNewProjectForm';
+import MobileCrumbs from '@/common/MobileCrumbs/MobileCrumbs';
+import DesktopCrumbs from '@/common/DesktopCrumbs/DesktopCrumbs';
 
 import { useMultistepForm } from '@/hooks/useMultistepForm';
 
@@ -74,8 +76,8 @@ const CreateProject = () => {
 
   return (
     <form onSubmit={onSubmit} className={styles.form}>
-      {/* <MobileCrumbs steps={steps} currentStepIndex={currentStepIndex} />
-      <DesktopCrumbs steps={steps} currentStepIndex={currentStepIndex} /> */}
+      <MobileCrumbs steps={steps} currentStepIndex={currentStepIndex} />
+      <DesktopCrumbs steps={steps} currentStepIndex={currentStepIndex} />
       <div className={styles.stepWrapper}>
         {step}
         <div className={styles.btnWrapper}>
