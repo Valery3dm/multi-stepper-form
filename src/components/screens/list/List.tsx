@@ -1,35 +1,26 @@
 import React from 'react';
 import Link from 'next/link';
 
-import styles from './Home.module.css';
+import ProjectCard from '@/components/ProjectCard/ProjectCard';
 
-type FormData = {
-  _id: string;
-  projectName: string;
-  projectURL: string;
-  projectCategory: string;
-  projectDetails: string;
-  workers: number;
-  productLaunch: string;
-  email: string;
-};
+import { ListProps } from './List.types';
 
-type ListProps = {
-  projects: FormData[];
-};
+import styles from './List.module.css';
 
 const List = ({ projects }: ListProps) => {
   return (
-    <div>
-      <ul>
+    <div className={styles.mainWrapper}>
+      <Link href={'/create-project'} className={styles.createBtn}>
+        Create New Project
+      </Link>
+      <ul className={styles.listWrapper}>
         {projects &&
-          projects.map((project, idx) => (
-            <li style={{ color: 'white' }} key={idx}>
-              {project._id}
+          projects.map((el, idx) => (
+            <li key={idx} className={styles.listItem}>
+              <ProjectCard {...el} />
             </li>
           ))}
       </ul>
-      <Link href={'/test'}>Test</Link>
     </div>
   );
 };

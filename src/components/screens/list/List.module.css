@@ -1,1 +1,36 @@
+.createBtn {
+  display: flex;
+  border: none;
+  max-width: 200px;
+  height: 48px;
+  background: #2B8CE6;
+  color: #fff;
+  border-radius: 10px;
+  justify-content: center;
+  align-items: center;
+}
 
+.mainWrapper {
+  margin: 50px 0 0 50px;
+}
+
+.listWrapper {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 24px;
+}
+
+.listItem {
+  width: 600px;
+}
+
+@media (max-width: 710px) {
+  .listItem {
+    width: 100%;
+  }
+
+  .mainWrapper {
+    margin: 50px 0 0 0px;
+  }
+}
