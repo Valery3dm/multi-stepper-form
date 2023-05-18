@@ -1,0 +1,27 @@
+.counterWrapper {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  margin: 16px 0 24px 0;
+}
+
+.counterBtn {
+  width: 48px;
+  height: 48px;
+  border: none;
+  color: #fff;
+  background: rgba(250, 250, 250, 0.1);
+  border-radius: 10px;
+}
+
+.counterInput {
+  width: 50%;
+}
+
+.emailLabel {
+  margin: 24px 0 16px 0;
+}
+
+.emailInput {
+  margin-bottom: 5px;
+}
