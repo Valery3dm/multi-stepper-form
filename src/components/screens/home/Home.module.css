@@ -23,6 +23,14 @@
   line-height: 22px;
 }
 
+.greetingText {
+  display: flex;
+  justify-content: center;
+  max-width: 600px;
+  line-height: 25px;
+  text-indent: 30px;
+}
+
 .greetingBtn:hover {
   background: #a8ffb6;
 }

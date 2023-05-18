@@ -11,6 +11,7 @@ import { useMultistepForm } from '@/hooks/useMultistepForm';
 import { FormData } from './CreateProject.types';
 
 import styles from './CreateProject.module.css';
+import { useRouter } from 'next/router';
 
 const INITIAL_DATA: FormData = {
   projectName: '',
@@ -24,6 +25,7 @@ const INITIAL_DATA: FormData = {
 
 const CreateProject = () => {
   const [data, setData] = useState(INITIAL_DATA);
+  const router = useRouter();
 
   const updateFields = (fields: Partial<FormData>) => {
     setData((prev) => {
@@ -61,7 +63,7 @@ const CreateProject = () => {
       });
 
       if (response.ok) {
-        window.location.replace('/list');
+        router.push('/list');
       }
     } catch (error) {
       console.log(error);
