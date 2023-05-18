@@ -39,7 +39,7 @@ export default function HomePage({ projects }: HomePageProps) {
 
 export async function getServerSideProps() {
   try {
-    const response = await fetch(`http://localhost:3000/api/projects`, {
+    const response = await fetch(`https://multi-stepper-form-4ir1xn0fm-valery3dm.vercel.app/api/projects`, {
       method: 'GET',
     });
     const data = await response.json();
