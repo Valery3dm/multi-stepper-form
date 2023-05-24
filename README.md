@@ -1,4 +1,4 @@
-# Lick on deploy https://multi-stepper-form.vercel.app/
+# Link on deploy https://multi-stepper-form.vercel.app/
 
 ## Getting Started
 
